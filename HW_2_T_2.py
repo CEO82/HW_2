@@ -21,11 +21,31 @@ while True:
         print(f'\nYour List is: {user_list}\n')
         break
 
+
+user_list = [22, 33, 44, 55, 66, 77] # delet after tests
+print(user_list) # delet after tests
+
 list_lenth = len(user_list)
 
 if list_lenth % 2 != 0:
     even_chk = 'non_even'
+else:
+    even_chk = 'even'
 
-counter = list_lenth
+if even_chk == 'non_even':
+    counter = list_lenth - 1
+else:
+    counter = list_lenth
+
+ind_2 = 1
+ind_1 = 0
+counter -= 1
 
 while counter > 0:
+    user_list.insert(ind_1, user_list[ind_2])
+    print(f'list after swap {user_list}')  # delet after tests
+
+    user_list.pop(ind_2 + 1)
+
+    ind_2, ind_1 = ind_2 + 2, ind_1 + 2
+    counter -= 1
