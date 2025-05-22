@@ -2,7 +2,6 @@
 Пользователь вводит числа через input() и добавляет их в список. После завершения ввода — программа должна вывести сумму всех чисел.
 
 📌 Дополнительно: проверить, что пользователь вводит только числа.'''
-from HW_2_T_2_gpt_variant import user_list
 
 print("\nProgram started \n")
 
@@ -14,15 +13,25 @@ while True:
         if user_numb <= 0:
             print("You are entered negative number or zero, please enter only positive integer digit!")
             continue
-        break
+
     except ValueError:
         print("You are entered wrong value, please try again.")
         continue
 
     user_list.append(user_numb)
-    print(user_list)
 
+    yes_no_qest = input('Do you want enter more number to the List? Y or N: ')
+    if yes_no_qest.lower() != 'n':
+        continue
+    else:
+        print(f'\nYour List is: {user_list}\n')
+        break
 
+num_sum = 0
 
+for i in user_list:
+    num_sum = i + num_sum
 
-    break
+print(f'Sum of numbers in your list is {num_sum}')
+
+print(f'\nProgram finished!')
