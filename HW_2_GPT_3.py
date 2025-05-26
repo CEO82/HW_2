@@ -19,7 +19,7 @@ if us_lst.count(el_to_del) < 1:
 for i in us_lst:
     if i == el_to_del:
         del us_lst[ind_cnt]
-    ind_cnt += 1
+    ind_cnt += 1 # need to fix logic
 
 if a == 1:
     print(f'The element {el_to_del} is not in the list {us_lst}')
