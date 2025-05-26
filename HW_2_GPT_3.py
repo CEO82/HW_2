@@ -7,3 +7,15 @@ python
 my_list = [1, 2, 3, 2, 4, 2, 5]
 Удалить все элементы равные 2.'''
 
+us_lst = [1, 3, 2, 5, 6, 7, 2, 9, 8]
+
+el_to_del = 2
+ind_cnt = 0
+
+for i in us_lst:
+    if i == el_to_del:
+        del us_lst[ind_cnt]
+    ind_cnt += 1
+
+print(f'New list is: {us_lst}')
+
