@@ -6,5 +6,12 @@
 user_str = 'Mother washed window in abrecadabreplus that is all'
 us_lst = user_str.split()
 
-for i in us_lst:
-    print(f'{i.title():.10}')
+'''for i in us_lst:
+    print(f'{i.title():.10}')'''
+
+print(f'\n{'*' * 25}\n{'№':<3}{'Word':<10}\n{'*' * 25}')
+
+for index, word in enumerate(us_lst, start=1):
+    print(f'{index} - {word.title():<10}')
+
+print(f'{'*' * 25}')
