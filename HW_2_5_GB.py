@@ -9,13 +9,29 @@
 '''
 
 basic_list = [7, 5, 3, 3, 2]
+print(f'Basic list is - {basic_list}\n')
 
 while True:
     try:
-        user_n = int(input("Please month number from 1 to 12: "))
+        user_n = int(input("Please enter positive number: "))
         if user_n < 0:
             print("You are entered negative number, please enter positive")
             continue
         break
     except ValueError:
         print("You are entered wrong value, please try again.")
+
+mx_lst = max(basic_list)
+mn_lst = min(basic_list)
+
+if user_n > mx_lst:
+    basic_list.insert(0, user_n)
+elif user_n < mn_lst:
+    basic_list.append(user_n)
+else:
+    basic_list.insert(basic_list.index(user_n), user_n)
+
+print(f'\nNew list is: {basic_list}')
+
+
+
