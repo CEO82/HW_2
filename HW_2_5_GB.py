@@ -24,14 +24,26 @@ while True:
 mx_lst = max(basic_list)
 mn_lst = min(basic_list)
 
-if user_n > mx_lst:
-    basic_list.insert(0, user_n)
-elif user_n < mn_lst:
-    basic_list.append(user_n)
+if basic_list.count(user_n) > 0:
+    if user_n > mx_lst:
+        basic_list.insert(0, user_n)
+    elif user_n < mn_lst:
+        basic_list.append(user_n)
+    else:
+        basic_list.insert(basic_list.index(user_n), user_n)
 else:
-    basic_list.insert(basic_list.index(user_n), user_n)
+    count = 0
+    srh_h = user_n
+    srh_l = user_n
+
+    while True:
+        srh_h += 1
+        srh_l -= 1
+        if basic_list.count(srh_h) > 0:
+            basic_list.insert(basic_list.index(srh_h) + 1, user_n)
+            break
+        elif basic_list.count(srh_l) > 0:
+            basic_list.insert(basic_list.index(srh_l) - 1, user_n)
+            break
 
 print(f'\nNew list is: {basic_list}')
-
-
-
