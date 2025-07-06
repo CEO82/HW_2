@@ -7,3 +7,11 @@ lst = [1, 2, 3, 4, 5]
 # ожидаемый вывод: [1, 3, 5]
 '''
 
+lst = [1, 2, 3, 4, 5]
+new_lst = []
+
+for d in lst:
+    if d % 2 != 0:
+        new_lst.append(d)
+
+print(f'\n{new_lst}')
